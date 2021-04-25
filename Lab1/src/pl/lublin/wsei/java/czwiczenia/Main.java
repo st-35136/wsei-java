@@ -1,6 +1,8 @@
 package pl.lublin.wsei.java.czwiczenia;
 
 import pl.lublin.wsei.java.czwiczenia.mylib.Account;
+import pl.lublin.wsei.java.czwiczenia.mylib.PasswordGenerator;
+import pl.lublin.wsei.java.czwiczenia.mylib.StringFun;
 
 
 public class Main {
@@ -95,5 +97,31 @@ public class Main {
         System.out.println(acc.getName());
         System.out.printf("%s%n",Account.capitalize("stanisŁaw maruSARz"));
         System.out.println(Account.translit("Привет мир"));
+
+        System.out.println(StringFun.anarchize("heLLo world"));
+        System.out.println(StringFun.anarchize("HELLO WORLD"));
+
+        System.out.println(StringFun.camelize("hello java world", " "));
+        System.out.println(StringFun.camelize("HELLO_JAVA_WORLD", "_"));
+
+        System.out.println(StringFun.decamelize("helloJavaWorld"));
+
+        System.out.println(StringFun.isPalindrome("Madam, I’m Adam"));
+
+        System.out.println(StringFun.shuffle("hello world"));
+
+        PasswordGenerator p = new PasswordGenerator(
+                20,
+                true,
+                true,
+                true,
+                true,
+                "%!{}"
+        );
+
+        System.out.println(p.generatePassword());
+
+        PasswordGenerator p2 = new PasswordGenerator(10, false);
+        System.out.println(p2.generatePassword());
     }
 }
