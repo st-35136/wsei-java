@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="566.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.lublin.wsei.java.czwiczenia.Controller">
+   <children>
+      <Button fx:id="btnMain" layoutX="27.0" layoutY="28.0" mnemonicParsing="false" onAction="#onBtnMainAction" prefHeight="25.0" prefWidth="203.0" text="Upload" />
+      <TableView fx:id="MainTableView" layoutX="6.0" layoutY="70.0" prefHeight="484.0" prefWidth="580.0">
+        <columns>
+          <TableColumn fx:id="nameTableColumn" prefWidth="75.0" text="Imie" />
+          <TableColumn fx:id="surnameTableColumn" prefWidth="75.0" text="Nazwisko" />
+            <TableColumn fx:id="yearTableColumn" prefWidth="75.0" text="Rok" />
+            <TableColumn fx:id="categoryTableColumn" prefWidth="75.0" text="Kategoria" />
+            <TableColumn fx:id="motivationTableColumn" prefWidth="98.0" text="Uzasadnienie" />
+            <TableColumn fx:id="countryTableColumn" prefWidth="71.0" text="Kraj" />
+        </columns>
+      </TableView>
+      <Label fx:id="labelFileName" layoutX="241.0" layoutY="28.0" prefHeight="25.0" prefWidth="283.0" />
+   </children>
+</AnchorPane>
